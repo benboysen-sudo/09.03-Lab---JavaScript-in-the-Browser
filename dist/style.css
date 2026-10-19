@@ -1,29 +1,8 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
-}
+body { background: #f4f6f8; color: #263445; font-family: Arial, sans-serif; }
+h1 { color: #234b70; }
+form { max-width: 520px; padding: 16px; background: #fff; border-radius: 8px; }
+fieldset { border: 1px solid #cbd5e1; border-radius: 6px; }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-  background-color: #e9e9e9;
+fieldset p {
+  margin: 0;
 }

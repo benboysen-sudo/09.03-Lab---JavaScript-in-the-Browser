@@ -1,25 +1,62 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>CS208 - Starter Code (UPDATE ME)!</title>
-  <meta name="description" content="">
+  <title>Starting Lineup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <h1>HTML Rocks!!</h1>
-  <ul>
-  <li><a href="/hello">Click here to say hello</a></li>
-  <li><button id="hello-link">Click Me!</button></li>
-  <li><button id="joke-button">Dad Joke!</button></li>
+  <h1>Starting Lineup</h1>
+  <form id="lineup-form">
+    <fieldset>
+      <legend>Status:</legend>
+      <p>
+        <input type="radio" id="draft" name="status" value="Draft">
+        <label for="draft">Draft</label>
+        <input type="radio" id="final" name="status" value="Final" checked>
+        <label for="final">Final</label>
+      </p>
+    </fieldset>
+
+    <p>
+      <label for="gameDate">Date:</label>
+      <select id="gameDate" name="gameDate">
+        <option value="March 20">March 20</option>
+        <option value="March 24">March 24</option>
+        <option value="April 2">April 2</option>
+        <option value="April 6">April 6</option>
+        <option value="April 13">April 13</option>
+      </select>
+    </p>
+
+    <fieldset>
+      <legend>Players:</legend>
+      <p>
+        <input type="checkbox" id="charlie-drescher" name="players" value="Charlie Drescher">
+        <label for="charlie-drescher">Charlie Drescher</label>
+      </p>
+      <p>
+        <input type="checkbox" id="kyle-thomas" name="players" value="Kyle Thomas">
+        <label for="kyle-thomas">Kyle Thomas</label>
+      </p>
+      <p>
+        <input type="checkbox" id="john-thomas" name="players" value="John Thomas">
+        <label for="john-thomas">John Thomas</label>
+      </p>
+      <p>
+        <input type="checkbox" id="jamie-hards" name="players" value="Jamie Hards">
+        <label for="jamie-hards">Jamie Hards</label>
+      </p>
+      <p>
+        <input type="checkbox" id="shawn-corey" name="players" value="Shawn Corey">
+        <label for="shawn-corey">Shawn Corey</label>
+      </p>
+    </fieldset>
+
+    <p><input type="submit" id="lineup-submit" value="Submit"></p>
+    <p id="lineup-display" aria-live="polite"></p>
+  </form>
   <script src="script.js"></script>
-  </ul>
-  <img src="funny.png" alt="Funny Image" width="300" height="200">
-
-  <h2 id="joke-display"></h2>
 </body>
-
 </html>
