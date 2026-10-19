@@ -8,11 +8,27 @@ function myLineUp(event) {
     return;
   }
 
-  const entries = Array.from(new FormData(form).entries());
-  console.log("Lineup data:", entries);
-  display.textContent = entries
-    .map(([field, value]) => `${field}: ${value}`)
-    .join(", ");
+  const status = form.querySelector('input[name="status"]:checked');
+  const gameDate = form.querySelector("#gameDate");
+  if (!(status instanceof HTMLInputElement) || !(gameDate instanceof HTMLSelectElement)) {
+    console.error("The lineup status or game date could not be found.");
+    return;
+  }
+
+  const players = Array.from(
+    form.querySelectorAll('input[name="players"]:checked'),
+    (player) => player.value
+  );
+  const lineup = {
+    status: status.value,
+    gameDate: gameDate.value,
+    players
+  };
+
+  console.log("Lineup data:", lineup);
+  display.textContent = `Status: ${lineup.status}, Date: ${lineup.gameDate}, Players: ${
+    lineup.players.length ? lineup.players.join(", ") : "None selected"
+  }`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
